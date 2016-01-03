@@ -23,8 +23,8 @@ files = []
 for file in os.listdir(folder):
     if file.endswith(".pdf"):
         filetxt = file[:-3]+"txt"
-#        arguments =  "-l 2 "+folder+file+" "+folder+filetxt
-#        call("pdftotext "+ arguments, shell=True)
+        arguments =  "-l 2 "+folder+file+" "+folder+filetxt
+        call("pdftotext "+ arguments, shell=True)
 
         files.append(filetxt)
 
@@ -213,15 +213,3 @@ for idx,name in enumerate(Name):
     z+=1
 
 book.save("Test.xls")
-
-#f = open('Emmer+Bombe+14.pdf', 'rb')
-#test = call(["pdftotext", "-l 1 "+folder+file])
-
-#with open(file, 'rb') as f:
-#    doc = PdfFileReader(f)
-
-
-#for file in files:
-#    with open(file, 'rb') as f:
-#        doc = PdfFileReader(f)
-#        print(doc[0])
